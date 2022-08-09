@@ -8,11 +8,13 @@ const scaleUp = keyframes({
 });
 
 export const StackCard = styled("div", {
+  backdropFilter: "blur(10px)",
+  background: "rgba(255, 255, 255,0)",
   minWidth: "10.25rem",
   maxWidth: "10.25rem",
   borderRadius: "$1",
   padding: "1rem",
-  background: "$whiteFixed",
+ // background: "$grey0",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

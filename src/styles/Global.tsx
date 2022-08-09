@@ -18,6 +18,9 @@ export const Flex = styled("div", {
 
 export const colors = {
   color: {
+    white1:{
+      color: "$whiteFixed",
+    },
     brand1: {
       color: "$brand1",
     },
@@ -27,7 +30,7 @@ export const colors = {
     },
 
     grey2: {
-      color: "$grey2",
+      color: "$whiteFixed",
     },
 
     grey3: {
@@ -44,6 +47,12 @@ export const colors = {
     grey6: {
       color: "$grey6",
     },
+    orangegold: {
+      color: "$brand2",
+    },
+    orangelets:{
+      color: "$brand3"
+    }
   },
 };
 
@@ -63,9 +72,12 @@ export const globalStyles = globalCss({
 export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
   const theme = createTheme({
     colors: {
-      brand1: "#5C63ED",
-      brand2: "#7D82F1",
-      brand3: "#BEC1F8",
+      grey0: "#1e1e22",
+      brand1: "#1e1e22",
+      
+
+      brand2: "#f5b324",
+     brand3: "#f5b324",
       brand4: "#E7E8FC",
       grey1: "#212529",
       grey2: "#495057",
@@ -74,7 +86,8 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       grey5: "#F8F9FA",
       grey6: "#DEE0FB",
       whiteFixed: "#ffffff",
-      mode: "#ffffff",
+      mode: "#1e1e22",
+
     },
     sizes: {
       container: "75rem",
@@ -85,8 +98,8 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       3: "2rem",
     },
     fonts: {
-      titles: '"Lexend", sans-serif;',
-      texts: '"Inter", sans-serif',
+      titles: 'Play',
+      texts: 'Play',
     },
     fontSizes: {
       title1: "2.75rem",

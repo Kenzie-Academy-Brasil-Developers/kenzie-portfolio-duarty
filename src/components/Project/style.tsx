@@ -1,8 +1,10 @@
 import { styled } from "../../styles/stitches.config";
-import { Flex } from "../../styles/Global"
+import { colors, Flex } from "../../styles/Global"
 import { Text } from "../../styles/Text"
 
 export const Project = styled("article", {
+  
+  borderRight: "1px solid #ffaa01",
   marginTop: "4rem",
 });
 
@@ -11,7 +13,7 @@ export const ProjectStack = styled(Flex, {
 });
 
 export const ProjectStackTech = styled("span", {
-  backgroundColor: "$brand4",
+  backgroundColor: "",
   color: "$brand2",
   padding: "0  0.5rem",
   borderRadius: "$2",

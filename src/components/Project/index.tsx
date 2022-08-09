@@ -8,8 +8,9 @@ import {
 
 import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
-import { FaGithub, FaShare } from "react-icons/fa";
+import { FaGithub, FaShare, FaCode } from "react-icons/fa";
 import { userData } from "@/utils/userData";
+
 
 interface ReposType {
   id: number;
@@ -50,28 +51,28 @@ export const Project = (): JSX.Element => {
             as="h2"
             type="heading3"
             css={{ marginBottom: "$3" }}
-            color="grey1"
+            color="orangelets"
           >
-            {repository.name}
+            <FaCode size={15}/> {repository.name}
           </Text>
 
           {repository.language && (
             <ProjectStack>
-              <Text type="body2">Linguagem:</Text>
+              <Text type="body2" color="white1">Linguagem:</Text>
               <ProjectStackTech>
-                <Text color="brand1" type="body2">
+                <Text color="orangelets" type="body2">
                   {repository.language}
                 </Text>
               </ProjectStackTech>
             </ProjectStack>
           )}
 
-          <Text type="body1" color="grey2">
+          <Text type="body1" color="white1">
             {repository.description}
           </Text>
           <ProjectLinks>
             <ProjectLink target="_blank" href={repository.git_url}>
-              <FaGithub /> Github Code
+              <FaGithub color="#f5b324"/> Github Code
             </ProjectLink>
             {repository.homepage && (
               <ProjectLink target="_blank" href={repository.homepage}>

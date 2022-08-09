@@ -34,11 +34,12 @@ export const HeaderButtonsArea = styled(Flex, {
 });
 
 export const StackSection = styled("section", {
-  backgroundColor: "$grey4",
+  backgroundColor: "$brand1",
   padding: "4rem 0 2rem 0",
 });
 
 export const StackCards = styled("div", {
+  
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
   padding: "3rem 0",
@@ -53,6 +54,7 @@ export const StackCards = styled("div", {
 });
 
 export const ProjectsArea = styled("section", {
+  backgroundColor: "$brand1",
   padding: "4rem 0 8rem 0",
 });
 

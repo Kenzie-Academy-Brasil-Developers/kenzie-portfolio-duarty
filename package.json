@@ -9,10 +9,16 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "add": "^2.0.6",
+    "axios": "^0.27.2",
+    "js-file-download": "^0.4.12",
     "react": "^18.0.0",
+    "react-backdrop-filter": "^2.1.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",
-    "use-media": "^1.4.0"
+    "typewriter-effect": "^2.19.0",
+    "use-media": "^1.4.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

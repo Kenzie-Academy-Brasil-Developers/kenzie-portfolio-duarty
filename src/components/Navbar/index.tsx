@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
+import Typewriter from 'typewriter-effect';
 
 import {
   Navbar as NavbarWrapper,
@@ -11,7 +12,7 @@ import {
   NavbarMobileArea,
 } from "./style";
 
-import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaBars, FaWhatsapp } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container } from "@/styles/Global";
@@ -43,8 +44,15 @@ export const NavBar = (): JSX.Element => {
               title={userData.nameUser}
               width={"48px"}
               height={"48px"}
+              
             />
-            <LogoTipoText>{userData.nameUser}</LogoTipoText>
+            <LogoTipoText><Typewriter
+              onInit={(typewriter) => typewriter.typeString(userData.nameUser)
+                .pauseFor(5000)
+                .deleteAll()
+                .typeString("duarty")
+                .start()}
+            /></LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button
@@ -55,7 +63,7 @@ export const NavBar = (): JSX.Element => {
               {!open ? <FaBars /> : <IoClose />}
             </Button>
           )}
-        </NavbarMobileArea>
+        </NavbarMobileArea >
         {isWide ? open && <NavLinks /> : <NavLinks />}
       </Container>
     </NavbarWrapper>
@@ -67,12 +75,12 @@ export const NavLinks = (): JSX.Element => {
     <NavbarLinks>
       {userData.whatsappNumber && (
         <Button
-          type="primary"
+          type="icon"
           as="a"
           target="_blank"
           href={`https://api.whatsapp.com/send?phone=+55${userData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}
         >
-          Falar no whatsapp
+          <FaWhatsapp color="#f5b324" size={20}/>
         </Button>
       )}
 
@@ -84,7 +92,7 @@ export const NavLinks = (): JSX.Element => {
           aria-label="Github"
           href={`https://github.com/${userData.githubUser}`}
         >
-          <FaGithub />
+          <FaGithub color="#f5b324" size={20}/>
         </Button>
       )}
 
@@ -96,7 +104,7 @@ export const NavLinks = (): JSX.Element => {
           aria-label="LinkedIn"
           href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
         >
-          <FaLinkedinIn />
+          <FaLinkedinIn color="#f5b324"size={20}/>
         </Button>
       )}
     </NavbarLinks>

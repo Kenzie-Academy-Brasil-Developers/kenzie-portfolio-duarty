@@ -2,13 +2,12 @@ import { styled } from '@/styles/stitches.config';
 import { colors } from '@/styles/Global'
 
 export const Button = styled('button', {
+    border: "none",
     height: "2.75rem",
     appearance: "none",
-    background: "$whiteFixed",
-    color: "$grey1",
+    color: "#ffaa01",
     fontWeight: "600",
     padding: "0 2rem",
-    border: "2px solid $whiteFixed",
     borderRadius: "$1",
     cursor: "pointer",
     fontSize: "1rem",
@@ -25,31 +24,29 @@ export const Button = styled('button', {
                 borderColor: "transparent",
             },
             primary: {
-                background: "$brand1",
-                borderColor: "$brand1",
+                background: "transparent",
+               
                 color: "$whiteFixed",
                 "&:hover": {
-                    backgroundColor: "$brand2",
-                    borderColor: "$brand2",
+                    backgroundColor:"transparent",
+                   
                 }
             },
             icon: {
-                borderColor: "$grey5",
+                borderColor: "#ffaa01",
                 backgroundColor: "transparent",
                 "&:hover": {
-                    backgroundColor: "$grey5",
+                    backgroundColor: "transparent",
+                    borderBottom: '1px solid #ffaa01',
+                    borderRadius: "0px"
                 }
             },
             circle: {
-                borderColor: "$grey5",
-                backgroundColor: "$whiteFixed",
-                borderRadius: "50%",
+                background: "none",
                 padding: "0",
                 width: "2.75rem",
                 height: "2.75rem",
-                "&:hover": {
-                    backgroundColor: "$grey5",
-                }
+                
             }
         },
         ...colors

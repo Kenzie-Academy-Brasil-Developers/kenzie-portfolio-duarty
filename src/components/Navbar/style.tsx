@@ -1,10 +1,14 @@
 import { styled } from "../../styles/stitches.config";
 import { Flex, Container } from "../../styles/Global";
 import { Button } from "../../styles/Buttons";
+import { colors} from "../../styles/Global";
+import { FaRegIdBadge } from "react-icons/fa";
 
 export const Navbar = styled("nav", {
-  background: "$mode",
-  borderBottom: "2px solid $grey4",
+  backdropFilter: "blur(10px)",
+  background: "rgba(255, 255, 255,0)",
+  //background: "$mode",
+  
   position: "fixed",
   inset: 0,
   bottom: "auto",
@@ -26,6 +30,7 @@ export const LogoTipo = styled(Flex, {
 });
 
 export const LogoTipoImage = styled("img", {
+
   width: "3rem",
   height: "3rem",
   borderRadius: "50%",
@@ -38,15 +43,17 @@ export const LogoTipoImage = styled("img", {
 export const LogoTipoText = styled("span", {
   fontSize: "1.25rem",
   fontWeight: 600,
-  color: "$grey1",
-  fontFamily: '"IBM Plex Sans"',
+  color: "$brand2",
+  fontFamily: '"Play"',
   "@mobile": {
     fontSize: "1rem",
   }
 });
 
 export const NavbarLinks = styled(Flex, {
+  
   "@mobile": {
+    
     flexWrap: "wrap",
     justifyContent: "space-between",
     marginTop: "$3",
@@ -59,9 +66,12 @@ export const NavbarLinks = styled(Flex, {
       order: "1",
     },
   },
+  
 });
 
 export const NavbarMobileArea = styled("div", {
+    border: "none",
    display: "flex",
    justifyContent: "space-between"
 });
+

@@ -10,6 +10,8 @@ const bodyDefaultConfig = {
 }
 
 export const Text = styled("p", {
+    overflowWrap: "break-word",
+    textAlign: "justify",
     color: "$grey1",
     fontSize: "$text1",
     fontWeight: 400,
